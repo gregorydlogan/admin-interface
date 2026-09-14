@@ -221,6 +221,7 @@
 		"MISSING_ACL_RULES": "Przynajmniej jedna rola, z uprawnieniem do zapisu lub odczytu jest wymagana!",
 		"SAVED_ACL_RULES": "Reguły dostępu zostały zapisane.",
 		"SERIES_THEME_REPROCESS_EXISTING_EVENTS": "Wydarzenia w tej serii będą musiały być przetworzone ponownie",
+		"SERIES_THEME_NOT_SAVED": "The theme could not be saved",
 		"SERIES_ACL_LOCKED": "Edytowanie zasad dostępu jest niedozwolone, jeśli wykonywane są operacje dotyczące zdarzenia, które jest częścią serii",
 		"EVENT_ACL_MISSING_READWRITE_ROLE": "Zasada dostępu musi zawierać przynajmniej jedną rolę użytkownika z uprawnieniem do zapisu lub odczytu.",
 		"METADATA_SAVED": "The metadata has been saved.",
@@ -483,6 +484,11 @@
 			"DELETE_SUBMIT_STATE": {
 				"TEXT": "Are you sure you want to delete your registration data?"
 			}
+		},
+		"NOTIFICATION": {
+			"TYPE": "Registration",
+			"UNREGISTERED": "Unregistered",
+			"UPDATED_TOU": "Updated ToU"
 		}
 	},
 	"EVENTS": {

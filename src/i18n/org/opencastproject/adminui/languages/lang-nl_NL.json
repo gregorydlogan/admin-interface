@@ -221,6 +221,7 @@
 		"MISSING_ACL_RULES": "Mindst én rolle med Læse- og skriverettighed kræves!",
 		"SAVED_ACL_RULES": "Adgangsreglerne er blevet gemt.",
 		"SERIES_THEME_REPROCESS_EXISTING_EVENTS": "De eksisterende begivenheder i denne serie skal genbehandles",
+		"SERIES_THEME_NOT_SAVED": "The theme could not be saved",
 		"SERIES_ACL_LOCKED": "Redigering af Adgangspolitikker er ikke tilladt, når operationer afvikles for en begivenhed, der er en del af serien",
 		"EVENT_ACL_MISSING_READWRITE_ROLE": "Adgangspolitikken kræver mindst én rolle med Læse- og skriverettigheder.",
 		"METADATA_SAVED": "The metadata has been saved.",
@@ -483,6 +484,11 @@
 			"DELETE_SUBMIT_STATE": {
 				"TEXT": "Are you sure you want to delete your registration data?"
 			}
+		},
+		"NOTIFICATION": {
+			"TYPE": "Registration",
+			"UNREGISTERED": "Unregistered",
+			"UPDATED_TOU": "Updated ToU"
 		}
 	},
 	"EVENTS": {

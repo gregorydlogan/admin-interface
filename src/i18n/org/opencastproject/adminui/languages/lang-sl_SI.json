@@ -221,6 +221,7 @@
 		"MISSING_ACL_RULES": "Potrebna je vsaj ena vloga z dovoljenji za branje in pisanje.",
 		"SAVED_ACL_RULES": "Pravila za dostop so shranjena.",
 		"SERIES_THEME_REPROCESS_EXISTING_EVENTS": "Obstoječe dogodke v tej seriji bo treba znova obdelati",
+		"SERIES_THEME_NOT_SAVED": "The theme could not be saved",
 		"SERIES_ACL_LOCKED": "Urejanje pravilnikov o dostopu ni dovoljeno, ko se v dogodku, ki je del serije, izvajajo postopki",
 		"EVENT_ACL_MISSING_READWRITE_ROLE": "Pravilnik o dostopu zahteva vsaj eno vlogo z dovoljenji za branje in pisanje.",
 		"METADATA_SAVED": "The metadata has been saved.",
@@ -483,6 +484,11 @@
 			"DELETE_SUBMIT_STATE": {
 				"TEXT": "Are you sure you want to delete your registration data?"
 			}
+		},
+		"NOTIFICATION": {
+			"TYPE": "Registration",
+			"UNREGISTERED": "Unregistered",
+			"UPDATED_TOU": "Updated ToU"
 		}
 	},
 	"EVENTS": {
