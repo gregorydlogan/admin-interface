@@ -48,16 +48,17 @@ jobs:
           github-token: ${{ github.token }}
           run-id: ${{ github.event.workflow_run.id }}
 
-      - name: Fetch pr number from GHA
+      - name: Fetch build path from GHA
         uses: actions/download-artifact@v4
         with:
-          name: ${{ github.event.workflow_run.id }}-number
+          name: ${{ github.event.workflow_run.id }}-path
           github-token: ${{ github.token }}
           run-id: ${{ github.event.workflow_run.id }}
 
-      - name: Read PR Number
+      - name: Read PR Number and build path
         run: |
-          echo "PR_NUMBER=$(cat pr_number.txt)" >> $GITHUB_ENV
+          echo "BUILD_PATH=$(cat build_path.txt)" >> $GITHUB_ENV
+          echo "PR_NUMBER=$(cat build_path.txt | cut -f 1 -d '/')" >> $GITHUB_ENV
 
       - name: Store build in the clone
         run: |
@@ -86,7 +87,7 @@ jobs:
         working-directory: admin-interface-test
         run: |
           git add .
-          git commit --amend -m "Build ${{ github.event.workflow_run.pull_requests[0].number }}"
+          git commit --amend -m "Build ${{ env.BUILD_PATH }}"
 
       - name: Force push admin interface test branch
         working-directory: admin-interface-test
@@ -100,7 +101,7 @@ jobs:
           comment-tag: static-test-deployment
           message: >
             This pull request is deployed at
-            [test.admin-interface.opencast.org/${{ steps.build-path.outputs.build }}
-            ](https://test.admin-interface.opencast.org/${{ steps.build-path.outputs.build }}).
+            [test.admin-interface.opencast.org/${{ env.BUILD_PATH }}
+            ](https://test.admin-interface.opencast.org/${{ env.BUILD_PATH }}).
 
             It might take a few minutes for it to become available.
