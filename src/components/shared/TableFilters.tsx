@@ -13,6 +13,7 @@ import {
 	removeTextFilter,
 	resetFilterValues,
 } from "../../slices/tableFilterSlice";
+import { reverseTable } from "../../slices/tableSlice";
 import {
 	goToPage,
 } from "../../thunks/tableThunks";
@@ -118,6 +119,7 @@ const TableFilters = ({
 		let mustApplyChanges = false;
 		if (name === "textFilter") {
 			dispatch(editTextFilter({ text: value, resource: resource }));
+			dispatch(reverseTable("NONE"));
 			mustApplyChanges = true;
 		}
 
